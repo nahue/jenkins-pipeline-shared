@@ -30,10 +30,10 @@ def call(String buildStatus = 'STARTED') {
   // Send notifications
   slackSend (color: colorCode, message: summary)
 
-  hipchatSend (color: color, notify: true, message: summary)
+  // hipchatSend (color: color, notify: true, message: summary)
 
   emailext (
-      to: 'bitwiseman@bitwiseman.com',
+      // to: 'bitwiseman@bitwiseman.com',
       subject: subject,
       body: details,
       recipientProviders: [[$class: 'DevelopersRecipientProvider']]
